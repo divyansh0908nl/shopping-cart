@@ -5,6 +5,7 @@ import { ReactQueryProvider } from "../utils/ReactQueryProvider";
 
 const Products = () => {
   const { data, isLoading } = useGetAllProducts();
+  console.log(data);
   // useEffect(() => {
   //   if (availableProducts && availableProducts.length > 0){
 

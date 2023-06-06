@@ -11,11 +11,12 @@ interface Product {
   }
 
 export const getAllProducts = async () =>{
+    console.log(baseUrl,"hhhh")
     let data:Product[] = [];
     try{
-        const response = await fetch(`${baseUrl}api/products`);
+        const response = await fetch(`${baseUrl}/api/products`);
         data = await response.json();
-        console.log(data)
+        console.log(baseUrl)
         return data;
     
     }catch (err){
