@@ -1,4 +1,5 @@
 {
+  "name": "jadoo",
   "private": true,
   "workspaces": [
     "apps/*",
