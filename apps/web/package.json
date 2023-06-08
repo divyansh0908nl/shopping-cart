@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint src --fix --ext .js,.ts,.tsx && yarn format"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.29.12",
