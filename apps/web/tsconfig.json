@@ -1,5 +1,5 @@
 {
-  "extends": "tsconfig/nextjs.json",
+  "extends": "@jadoo/tsconfig/nextjs.json",
   "compilerOptions": {
     "jsx": "preserve",
     "plugins": [

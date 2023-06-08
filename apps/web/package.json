@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "@jadoo/web",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -13,7 +13,7 @@
     "next": "^13.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "ui": "*",
+    "@jadoo/ui": "*",
     "@jadoo/services": "*"
   },
   "devDependencies": {
@@ -25,7 +25,8 @@
     "postcss": "^8.4.24",
     "tailwind-config": "*",
     "tailwindcss": "^3.3.2",
-    "tsconfig": "*",
+    "@jadoo/tsconfig": "*",
+    "@jadoo/eslint-config-custom":"*",
     "typescript": "^4.5.3"
   }
 }
