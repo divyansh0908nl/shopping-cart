@@ -1,55 +1,64 @@
-import React, { useState, useEffect } from "react";
+import { useState } from 'react';
 
-const CounterStrip = ({ product }) => {
+/*
+ * a user interface component that provides a counter functionality
+ * with increment, decrement and remove buttons.
+ * It is used to manage the quantity of a product, typically in a shopping cart
+ * or similar scenario.
+ */
+function CounterStrip() {
   const [count, setCount] = useState(0);
   const handleIncrement = () => {
     setCount(count + 1);
-    let toSend = {};
+    /*
+     *! this is the place where we will send the request to the server
+     *! to update the quantity of the product in the cart
+     *# will use when we will have the cart logic
+     */
     // toSend.productId = product.id ? product.id : product._id;
     // toSend.count = count + 1;
   };
   const handleDecrement = () => {
     if (count > 0) {
       setCount(count - 1);
-      let toSend = {};
-    //   toSend.productId = product.id ? product.id : product._id;
-    //   toSend.count = count - 1;
+      /*
+       *! this is the place where we will send the request to the server
+       *! to update the quantity of the product in the cart
+       *# will use when we will have the cart logic
+       */
+      //   toSend.productId = product.id ? product.id : product._id;
+      //   toSend.count = count - 1;
     }
   };
-  // useEffect(() => {
-
-  //     const item = items.find((item) => item.product?._id === (product.id?product.id:product?._id));
-
-  //     if (item) {
-  //     setCount(item.quantity);
-  //     }
-  // }, [items, product.id]);
 
   return (
-    <div className="flex flex-row justify-between my-4">
+    <div className="my-4 flex flex-row justify-between">
       <button
-        className="bg-blue-500 rounded-md  p-2"
+        type="button"
+        className="rounded-md bg-blue-500  p-2"
         onClick={handleDecrement}
         disabled={count === 1}
       >
         -
       </button>
-      <strong className="my-auto mx-2">{count}</strong>
+      <strong className="mx-2 my-auto">{count}</strong>
       <button
-        className="bg-blue-500 rounded-md p-2"
+        type="button"
+        className="rounded-md bg-blue-500 p-2"
         onClick={handleIncrement}
       >
         +
       </button>
 
       <button
-        className="bg-blue-500 rounded-md px-1 py-2 mx-2 "
-        onClick={() => console.log("removed")}
+        type="button"
+        className="mx-2 rounded-md bg-blue-500 px-1 py-2 "
+        onClick={() => {}}
       >
         Remove
       </button>
     </div>
   );
-};
+}
 
 export default CounterStrip;

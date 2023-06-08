@@ -14,6 +14,7 @@
     "eslint-config-custom": "*",
     "react": "18.2",
     "@jadoo/tsconfig": "*",
+    "@jadoo/eslint-config-custom":"*",
     "typescript": "^4.5.2"
   }
 }

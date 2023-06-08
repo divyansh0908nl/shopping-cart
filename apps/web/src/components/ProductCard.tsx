@@ -1,57 +1,78 @@
-import React from "react";
-import { useRouter } from "next/router";
-import { baseUrl } from "../utils/baseUrl";
-import CounterStrip from "./CounterStrip";
+import { useRouter } from 'next/router';
+import Image from 'next/image';
 
+import { baseUrl } from '../utils/baseUrl';
+
+import CounterStrip from './CounterStrip';
 
 interface Product {
-    id: string;
-    name: string;
-    image: string;
-    unitPrice: number;
-    quantity: number;
-  }
+  id: string;
+  name: string;
+  image: string;
+  unitPrice: number;
+  quantity: number;
+}
 interface ProductCardProps {
-    product: Product;
-    handleAdd: (product: any) => void;
-  }
-const ProductCard = (props: ProductCardProps) => {
-    const { product, handleAdd } = props;
-    const { name, image, unitPrice, quantity } = product;
-    let count = 0;
-    const navigate = useRouter();
-  
-    const navigateToProduct = () => {
-        navigate.push(`/product/${product.id}`); 
-    };
-  
-    
-  
-    return (
-      <div className="mx-4 w-full bg-slate-400 md:w-1/3 lg:w-1/4 p-4 border border-gray-200 rounded-lg items-center" >
-        <img src={baseUrl + `${image}`} alt="fruit image" className="w-full h-40"/>
-        <h4>{name}</h4>
-        <strong>
-         Price: {unitPrice} Rs.
-        
-        </strong>
-        <h5>
-        Quantity: {quantity} pcs
-        </h5>
-        <div>
-        <button className="bg-blue-500 rounded-md px-4 my-2 py-2" onClick={navigateToProduct} >
+  product: Product;
+}
+export function ProductCard({ product }: ProductCardProps) {
+  const { name, image, unitPrice, quantity } = product;
+  const count = 0;
+  const navigate = useRouter();
+
+  const handleAdd = (product) => {
+    /*
+     *! this is the place where we will send the request to the server
+     *! to add the product in the cart
+     *! will update after cart logic
+     */
+  };
+
+  const navigateToProduct = () => {
+    navigate.push(`/product/${product.id}`);
+  };
+
+  return (
+    <div
+      className="mx-4 w-full items-center rounded-lg border border-gray-200
+    bg-slate-400 p-4 md:w-1/3 lg:w-1/4"
+    >
+      <Image
+        src={`${baseUrl}/${image}`}
+        alt="fruit image"
+        className="h-40 w-full"
+      />
+      <h4>{name}</h4>
+      <strong>
+        Price:
+        {unitPrice}
+        Rs.
+      </strong>
+      <h5>
+        Quantity:
+        {quantity}
+        pcs
+      </h5>
+      <div>
+        <button
+          type="button"
+          className="my-2 rounded-md bg-blue-500 px-4 py-2"
+          onClick={navigateToProduct}
+        >
           View
         </button>
         {!count ? (
-          <button onClick={() => handleAdd(product)} className="bg-blue-500 rounded-md px-4 py-2">
+          <button
+            type="button"
+            onClick={() => handleAdd(product)}
+            className="rounded-md bg-blue-500 px-4 py-2"
+          >
             Add to cart
           </button>
         ) : (
-          <CounterStrip product={product} />
+          <CounterStrip />
         )}
-        </div>
       </div>
-    );
-  };
-  
-  export default ProductCard;
+    </div>
+  );
+}

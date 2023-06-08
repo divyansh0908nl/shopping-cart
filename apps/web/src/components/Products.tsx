@@ -1,40 +1,29 @@
-import React, { useEffect, useState } from "react";
-import ProductCard from "../components/ProductCard";
-import { useGetAllProducts } from "../hooks/useGetAllProducts";
-import { ReactQueryProvider } from "../utils/ReactQueryProvider";
+import { useGetAllProducts } from '../hooks/useGetAllProducts';
 
-const Products = () => {
-  const { data, isLoading } = useGetAllProducts();
-  console.log(data);
-  // useEffect(() => {
-  //   if (availableProducts && availableProducts.length > 0){
+import { ProductCard } from './ProductCard';
 
-  //       setAllProducts(availableProducts);
-  //   }
-  //   }, [availableProducts]);
-  const handleAdd = (product) => {
-    console.log("before");
-    console.log("After");
-  };
+export function Products() {
+  const { data, isLoading, isError } = useGetAllProducts();
+
   if (isLoading) {
-    return <h1>Loading...</h1>;
+    return <h2>Loading...</h2>;
+  }
+
+  if (isError) {
+    return <h2>Error</h2>;
+  }
+
+  if (!isLoading && !data) {
+    return <h2>No data</h2>;
   }
 
   return (
     <div className="container">
-      <div className="flex flex-wrap w-full">
-        {data &&
-          data.map((product) => {
-            return (
-              <ProductCard
-                key={product.id}
-                product={product}
-                handleAdd={handleAdd}
-              />
-            );
-          })}
+      <div className="flex w-full flex-wrap">
+        {data.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
       </div>
     </div>
   );
-};
-export default Products;
+}

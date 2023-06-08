@@ -1,6 +1,11 @@
-const addproducts = () => (
-  <div>
-    <h1>Add Products</h1>
-  </div>
-);
+function addproducts() {
+  /*
+   * page for adding new products
+   */
+  return (
+    <div>
+      <h1>Add Products</h1>
+    </div>
+  );
+}
 export default addproducts;

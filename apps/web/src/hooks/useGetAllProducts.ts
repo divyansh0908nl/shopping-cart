@@ -1,4 +1,5 @@
 import { useQuery } from '@jadoo/services';
+
 import { getAllProducts } from '../API/products';
 
 export const useGetAllProducts = (onSuccess = () => {}, onError = () => {}) => {
