@@ -18,9 +18,7 @@ const products = () => {
   
 
   return (
-    <ReactQueryProvider>
    <Products />
-    </ReactQueryProvider>
   );
 };
 export default products;
