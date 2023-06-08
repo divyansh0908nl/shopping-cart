@@ -1,5 +1,2 @@
-import * as React from "react";
-// im
-export * from "./Button";
-export * from "./Header";
-export * from "./NavBar";
+export * from './Button';
+export * from './Header';
