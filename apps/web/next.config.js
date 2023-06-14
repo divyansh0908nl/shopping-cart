@@ -1,4 +1,4 @@
 module.exports = {
   reactStrictMode: true,
-  transpilePackages: ['ui', '@jadoo/services'],
+  transpilePackages: ['@jadoo/design-system', '@jadoo/services', '@jadoo/apis'],
 };
