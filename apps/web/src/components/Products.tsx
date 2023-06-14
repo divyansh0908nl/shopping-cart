@@ -1,9 +1,9 @@
-import { useGetAllProducts } from '../hooks/useGetAllProducts';
+import { useGetAllProducts } from '@jadoo/apis';
 
 import { ProductCard } from './ProductCard';
 
 export function Products() {
-  const { data, isLoading, isError } = useGetAllProducts();
+  const { data, isLoading, isError } = useGetAllProducts({});
 
   if (isLoading) {
     return <h2>Loading...</h2>;

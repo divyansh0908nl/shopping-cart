@@ -15,6 +15,7 @@
     "react-dom": "^18.2.0",
     "@jadoo/design-system": "*",
     "@jadoo/services": "*",
+    "@jadoo/apis": "*"
   },
   "devDependencies": {
     "@types/node": "^17.0.12",

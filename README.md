@@ -20,6 +20,7 @@ This Turborepo uses [yarn](https://classic.yarnpkg.com/lang/en/) as a packages m
 - `design-sytem`: a stub React component library shared by `web` application
 - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
+- `apis`: a package containg all types of api and api wrappers
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
