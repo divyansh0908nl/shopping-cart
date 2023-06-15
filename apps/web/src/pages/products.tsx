@@ -1,6 +1,10 @@
 import { NavBar } from '../components/NavBar';
 import { Products } from '../components/Products';
 
+/**
+ * -----------------------------------------------------------------------------
+ * all products page
+ */
 function products() {
   return (
     <>

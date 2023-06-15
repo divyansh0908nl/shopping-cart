@@ -18,7 +18,7 @@ export function ProductCard({ product }: { product: IProduct }) {
   const count = 0;
   const navigate = useRouter();
 
-  const handleAdd = () => {
+  const handleAddToCart = () => {
     /*
      *! this is the place where we will send the request to the server
      *! to add the product in the cart
@@ -70,7 +70,7 @@ export function ProductCard({ product }: { product: IProduct }) {
         {!count ? (
           <button
             type="button"
-            onClick={handleAdd}
+            onClick={handleAddToCart}
             className="rounded-md bg-blue-500 px-4 py-2"
           >
             Add to cart

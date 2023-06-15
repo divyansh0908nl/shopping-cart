@@ -2,6 +2,12 @@ import { useGetAllProducts } from '@jadoo/apis';
 
 import { ProductCard } from './ProductCard';
 
+/**
+ * -----------------------------------------------------------------------------
+ * Renders a list of all products
+ * @component
+ * @returns JSX.Element
+ */
 export function Products() {
   const { data, isLoading, isError } = useGetAllProducts({});
 
