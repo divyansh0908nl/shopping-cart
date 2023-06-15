@@ -13,7 +13,7 @@ export function Products() {
     return <h2>Error</h2>;
   }
 
-  if (!isLoading && !data) {
+  if (!data) {
     return <h2>No data</h2>;
   }
 
@@ -21,7 +21,7 @@ export function Products() {
     <div className="container">
       <div className="flex w-full flex-wrap">
         {data.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard key={product._id} product={product} />
         ))}
       </div>
     </div>
