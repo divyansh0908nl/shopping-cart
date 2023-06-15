@@ -1,6 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+/**
+ * -----------------------------------------------------------------------------
+ * Renders the navigation bar component.
+ */
 export function NavBar() {
   return (
     <header className="body-font text-gray-600">

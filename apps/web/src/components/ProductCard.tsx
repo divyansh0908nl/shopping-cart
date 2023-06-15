@@ -5,17 +5,14 @@ import { baseUrl } from '../utils/baseUrl';
 
 import CounterStrip from './CounterStrip';
 
-interface Product {
-  id: string;
-  name: string;
-  image: string;
-  unitPrice: number;
-  quantity: number;
-}
-interface ProductCardProps {
-  product: Product;
-}
-export function ProductCard({ product }: ProductCardProps) {
+/**
+ * -----------------------------------------------------------------------------
+ * Renders a product card component.
+ * @component
+ * @param {IProduct} props.product - The product object.
+ * @returns {JSX.Element} - The rendered component.
+ */
+export function ProductCard({ product }: { product: IProduct }) {
   const { name, image, unitPrice, quantity } = product;
   const count = 0;
   const navigate = useRouter();
@@ -30,6 +27,12 @@ export function ProductCard({ product }: ProductCardProps) {
 
   const navigateToProduct = () => {
     navigate.push(`/product/${product.id}`);
+  const handleOnViewClick = () => {
+    /*
+     *! this is the place from where we will navigate to
+     *! product specific page
+     *! will complete in next PR
+     */
   };
 
   return (

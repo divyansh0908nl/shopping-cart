@@ -1,10 +1,14 @@
 import { useState } from 'react';
 
-/*
+/**
+ * -----------------------------------------------------------------------------
  * a user interface component that provides a counter functionality
  * with increment, decrement and remove buttons.
  * It is used to manage the quantity of a product, typically in a shopping cart
  * or similar scenario.
+ * @component
+ * @param
+ * @returns {JSX.Element} - The rendered component.
  */
 function CounterStrip() {
   const [count, setCount] = useState(0);
