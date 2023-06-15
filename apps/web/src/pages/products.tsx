@@ -1,26 +1,16 @@
-import React, { useEffect, useState } from "react";
-import ProductCard from "../components/ProductCard";
-import { useGetAllProducts } from "../hooks/useGetAllProducts";
-import { ReactQueryProvider } from "../utils/ReactQueryProvider";
-import Products from "../components/Products";
+import { NavBar } from '../components/NavBar';
+import { Products } from '../components/Products';
 
-const products = () => {
-  // useEffect(() => {
-  //   if (availableProducts && availableProducts.length > 0){
-
-  //       setAllProducts(availableProducts);
-  //   }
-  //   }, [availableProducts]);
-  const handleAdd = (product) => {
-    console.log("before");
-    console.log("After");
-  };
-  
-
+/**
+ * -----------------------------------------------------------------------------
+ * all products page
+ */
+function products() {
   return (
-    <ReactQueryProvider>
-   <Products />
-    </ReactQueryProvider>
+    <>
+      <NavBar />
+      <Products />
+    </>
   );
-};
+}
 export default products;

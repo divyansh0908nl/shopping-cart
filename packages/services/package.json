@@ -1,0 +1,22 @@
+{
+  "name": "@jadoo/services",
+  "version": "0.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint src --fix --ext .js,.ts,.tsx && yarn format"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^4.29.12",
+    "@tanstack/react-query-devtools": "^4.29.12",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.23",
+    "@types/react-dom": "^18.0.7",
+    "@jadoo/tsconfig": "*",
+    "@jadoo/eslint-config-custom": "*"
+  }
+}

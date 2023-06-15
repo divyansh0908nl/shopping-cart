@@ -6,4 +6,4 @@
 //   ...sharedConfig,
 // };
 
-module.exports = require("../../packages/configs/tailwind-config/tailwind.config");
+module.exports = require('../../packages/configs/tailwind-config/tailwind.config');

@@ -1,19 +1,22 @@
 {
-  "name": "web",
+  "name": "@jadoo/web",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "format": "prettier --write .",
+    "lint": "eslint src --fix --ext .js,.ts,.tsx && yarn format"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.29.12",
     "next": "^13.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "ui": "*"
+    "@jadoo/design-system": "*",
+    "@jadoo/services": "*",
+    "@jadoo/apis": "*"
   },
   "devDependencies": {
     "@types/node": "^17.0.12",
@@ -24,7 +27,8 @@
     "postcss": "^8.4.24",
     "tailwind-config": "*",
     "tailwindcss": "^3.3.2",
-    "tsconfig": "*",
+    "@jadoo/tsconfig": "*",
+    "@jadoo/eslint-config-custom": "*",
     "typescript": "^4.5.3"
   }
 }

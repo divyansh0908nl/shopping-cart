@@ -1,0 +1,1 @@
+export { useGetAllProducts } from './useGetAllProducts';

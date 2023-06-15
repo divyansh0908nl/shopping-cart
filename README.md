@@ -16,11 +16,11 @@ This Turborepo uses [yarn](https://classic.yarnpkg.com/lang/en/) as a packages m
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app
 - `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
+- `design-sytem`: a stub React component library shared by `web` application
 - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
+- `apis`: a package containing all types of api and api wrappers
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 

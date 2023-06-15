@@ -1,0 +1,9 @@
+node_modules/
+android/
+ios/
+.next/
+.turbo/
+
+# Temp - Backup files
+.temp-staging/
+.temp-staging-wip/
