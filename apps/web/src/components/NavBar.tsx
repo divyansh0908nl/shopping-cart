@@ -15,29 +15,19 @@ export function NavBar() {
         <nav className="flex flex-wrap items-center justify-center text-base md:ml-auto">
           <Link
             href="/addproducts"
-            className="mr-5 bg-red-500 hover:bg-red-400 hover:text-gray-900"
+            className="mr-5 rounded-md bg-green-200 px-2 py-1 hover:bg-green-400
+                      hover:text-gray-900"
           >
-            First Link
+            Add Product
+          </Link>
+          <Link
+            href="/products"
+            className="mr-5 rounded-md bg-red-200 px-2 py-1 hover:bg-red-400
+                      hover:text-gray-900"
+          >
+            All Products
           </Link>
         </nav>
-        <button
-          type="button"
-          className="mt-4 inline-flex items-center rounded border-0 bg-gray-100
-          px-3 py-1 text-base hover:bg-gray-200 focus:outline-none md:mt-0"
-        >
-          Button
-          <svg
-            fill="none"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            className="ml-1 h-4 w-4"
-            viewBox="0 0 24 24"
-          >
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-        </button>
       </div>
     </header>
   );
