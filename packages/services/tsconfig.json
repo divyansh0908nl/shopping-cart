@@ -3,6 +3,6 @@
     "jsx": "react-jsx"
   },
   "extends": "@jadoo/tsconfig/react-library.json",
-  "include": [".","./*","./src/*"],
+  "include": [".", "./*"],
   "exclude": ["dist", "build", "node_modules"]
 }

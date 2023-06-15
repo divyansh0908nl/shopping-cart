@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "format": "prettier --write .",
     "lint": "eslint src --fix --ext .js,.ts,.tsx && yarn format"
   },
   "dependencies": {
@@ -27,7 +28,7 @@
     "tailwind-config": "*",
     "tailwindcss": "^3.3.2",
     "@jadoo/tsconfig": "*",
-    "@jadoo/eslint-config-custom":"*",
+    "@jadoo/eslint-config-custom": "*",
     "typescript": "^4.5.3"
   }
 }

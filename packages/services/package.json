@@ -16,7 +16,7 @@
   "devDependencies": {
     "@types/react": "^18.0.23",
     "@types/react-dom": "^18.0.7",
-    "@jadoo/tsconfig":"*",
-    "@jadoo/eslint-config-custom":"*"
+    "@jadoo/tsconfig": "*",
+    "@jadoo/eslint-config-custom": "*"
   }
 }
